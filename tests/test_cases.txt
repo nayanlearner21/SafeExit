@@ -1,0 +1,25 @@
+# SafeExit Test Cases
+
+1. Select IT Department, no blocked route, and click Find Safest Exit.
+   Expected: a reachable exit, route, distance, cost, risk and ETA are displayed.
+
+2. Select IT Department and block Library ↔ Sports Ground.
+   Expected: the calculated route avoids the blocked edge if an alternative exists.
+
+3. Select Mechanical Department.
+   Expected: danger penalties influence the selected minimum-cost route.
+
+4. Select Canteen.
+   Expected: the high danger setting associated with Canteen contributes to route analysis.
+
+5. Run Find Safest Exit from a connected location.
+   Expected: the BFS nearest-exit route is shown.
+
+6. Run Find Safest Exit from a connected location.
+   Expected: DFS reachable-location count is shown.
+
+7. Block enough connections to isolate the selected source from every exit.
+   Expected: No evacuation route available.
+
+8. Click Reset Scenario.
+   Expected: blocked routes are cleared and the original graph is restored.
